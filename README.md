@@ -30,8 +30,8 @@ OPENAI_MODEL=gpt-4o-mini
 
 ### 3. Build & Run with Docker
 ```bash
-docker build -t grounding-expert .
 docker run --rm -p 8000:8000 --env-file .env grounding-expert
+
 ```
 
 ---
@@ -52,13 +52,10 @@ $verdict
 
 **Response:**
 ```json
-{
-  "verdict": "Factually Correct",
-  "justification": "Neil Armstrong was the first person to walk on the moon during Apollo 11 in 1969.",
-  "provider": "openai",
-  "model": "gpt-4o-mini",
-  "raw": {...}
-}
+verdict         justification
+-------         -------------
+Factually Correct  Neil Armstrong was indeed the first person to walk on the moon on July 20, 1969, during the Apollo 11 mission.
+
 ```
 
 ---
