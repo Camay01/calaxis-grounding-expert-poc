@@ -39,7 +39,15 @@ docker run --rm -p 8000:8000 --env-file .env grounding-expert
 ## 🔎 Usage Example
 
 ```bash
-curl -X POST http://localhost:8000/validate   -H "Content-Type: application/json"   -d '{"statement":"The first person to walk on the moon was Neil Armstrong."}'
+$response = Invoke-RestMethod -Uri "http://localhost:8000/validate" `
+  -Method POST `
+  -Headers @{"Content-Type"="application/json"} `
+  -Body '{"statement":"The first person to walk on the moon was Neil Armstrong."}'
+
+# Parse the inner JSON string
+$verdict = $response.verdict | ConvertFrom-Json
+$verdict
+
 ```
 
 **Response:**
