@@ -16,7 +16,7 @@ It validates factual accuracy of AI-generated statements using an LLM.
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/<your-username>/calaxis-grounding-expert-poc.git
+git clone https://github.com/Camay01/calaxis-grounding-expert-poc.git
 cd calaxis-grounding-expert-poc
 ```
 
